@@ -11,6 +11,20 @@ A Claude Code skill that generates kinetic typography lyric videos from any MP3.
 
 Works with just an MP3 (Claude cleans up Whisper's output) or MP3 + lyrics file for perfect accuracy.
 
+## Example output
+
+<p align="center">
+  <a href="https://youtu.be/WnLsf9lLhKs">
+    <img src="example_2.jpg" width="250" alt="Watch example" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://youtu.be/WnLsf9lLhKs">Watch the full video on YouTube</a>
+</p>
+
+*AI-generated Eminem track with Wikipedia artist background, gold text, Ken Burns effect*
+
 ## Quick start
 
 ```bash
