@@ -96,6 +96,6 @@ Edit the render call in the skill to change:
 
 The hard part of kinetic lyrics videos is timing. Whisper gives you timestamps but gets words wrong. Lyrics files give you words but no timestamps. This skill uses both: Whisper for timing, Claude's judgment for the actual text.
 
-When you don't have lyrics, Claude uses context to fix Whisper's mistakes. For example, in a Gucci Mane track, Whisper hears "I'm a noodle" but Claude knows it's "ramen noodles" from the trap music context.
+When you don't have lyrics, Claude uses context to fix Whisper's mistakes. For example, Whisper might hear "got the miters touch" but Claude knows it's "got the Midas touch" from context.
 
 The renderer uses PIL for text with glow effects and moviepy for video assembly. No GPU required.
