@@ -1,0 +1,9 @@
+.env
+.env.local
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local test output (examples/ is committed; tiktok-slideshow-out/ is throwaway)
+tiktok-slideshow-out/
+out/
