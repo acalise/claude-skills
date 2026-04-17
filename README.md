@@ -12,6 +12,7 @@ Generate kinetic typography lyric videos from any MP3. Whisper for timestamps, C
 - Wikipedia artist backgrounds with Ken Burns effect
 - Glowing text, particles, smooth transitions
 - YouTube Shorts and TikTok ready
+- Live example: <https://youtu.be/WnLsf9lLhKs>
 
 ### [tiktok-slideshow](./tiktok-slideshow)
 
