@@ -14,6 +14,14 @@ Generate kinetic typography lyric videos from any MP3. Whisper for timestamps, C
 - YouTube Shorts and TikTok ready
 - Live example: <https://youtu.be/WnLsf9lLhKs>
 
+### [health-detective](./health-detective)
+
+Point Claude at an Apple Health `export.zip` and get back a short investigation report — anomalies, asymmetries, behavior shifts, cross-metric correlations. Runs fully local (Python stdlib only).
+
+- Parses 25+ HealthKit metrics + sleep stages + workouts into compact CSVs
+- Pre-flags anomalous weeks with a rolling z-score baseline
+- Optional `--focus sleep|injury|social|music|workouts|stress` to narrow the investigation
+
 ### [tiktok-slideshow](./tiktok-slideshow)
 
 Turn one sentence into a ready-to-post 5-slide vertical slideshow. Claude drafts the copy, Gemini renders the images with text baked in, optional MP4 assembly via ffmpeg. Bring your own `GEMINI_API_KEY`.
