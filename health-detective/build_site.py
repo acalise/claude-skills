@@ -340,11 +340,31 @@ HTML_TEMPLATE = r"""<!doctype html>
   .tag.neutral { background: rgba(242, 184, 102, 0.15); color: var(--warn); }
   .muted { color: var(--muted); }
   .warn-banner { background: rgba(242, 120, 120, 0.08); border: 1px solid rgba(242, 120, 120, 0.2); color: var(--bad); padding: 10px 14px; border-radius: 8px; margin-bottom: 20px; font-size: 13px; }
+  .header-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .print-btn { background: var(--panel); color: var(--text); border: 1px solid var(--grid); border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; font: inherit; }
+  .print-btn:hover { background: var(--panel2); border-color: var(--muted); }
+  @page { margin: 0; }
+  @media print {
+    :root { --bg: #fff; --panel: #fff; --panel2: #f7f7f7; --text: #111; --muted: #555; --grid: #ccc; }
+    html, body { background: #fff; color: #111; }
+    .wrap { max-width: none; padding: 0.5in; }
+    .print-btn { display: none; }
+    .panel, .card { break-inside: avoid; page-break-inside: avoid; box-shadow: none; }
+    .panels { grid-template-columns: 1fr 1fr; }
+    .panel.full { grid-column: 1 / -1; }
+    .panel canvas { max-height: 260px; height: 260px !important; width: 100% !important; }
+    .panel.full canvas { max-height: 300px; height: 300px !important; }
+    .anomaly-list { break-inside: auto; }
+    .anomaly-list li { break-inside: avoid; page-break-inside: avoid; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Health Detective</h1>
+  <div class="header-row">
+    <h1>Health Detective</h1>
+    <button class="print-btn" onclick="window.print()">Save as PDF</button>
+  </div>
   <div class="sub" id="sub"></div>
 
   <div class="grid cards" id="cards"></div>
